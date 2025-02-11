@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F5DEB3;
+  --foreground: #3E2C20;
+  --font-famaly: var(--font-lora);
+}
+
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: --font-famaly, serif;
+  
+}
