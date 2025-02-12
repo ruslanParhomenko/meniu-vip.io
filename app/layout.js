@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${lora.variable}  antialiased`}>
-        <h1 className="text-center text-3xl font-bold pt-10">MENIU</h1>
+        <h1 className="text-center text-3xl font-bold py-10">MENIU</h1>
         {children}
         <footer className=" flex items-center justify-center pb-5">
           <a
