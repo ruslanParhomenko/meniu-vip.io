@@ -51,11 +51,22 @@ export default function BarPage() {
                 height={16}
               />
             </h1>
-
             <div className="flex  gap-4 text-[14px] px-10">
-              <p></p>
-              <p className="flex-1">1/40</p>
-              <p>95 lei</p>
+              <p className="list-none">
+                {item.listItem?.map((item, id) => (
+                  <li key={id}>{item}</li>
+                ))}
+              </p>
+              <p className="flex-1 list-none">
+                {item.listGramm?.map((item, id) => (
+                  <li key={id}>{item}</li>
+                ))}
+              </p>
+              <p className="list-none">
+                {item.listPrice?.map((item, id) => (
+                  <li key={id}>{item} lei</li>
+                ))}
+              </p>
             </div>
           </div>
         ))}
