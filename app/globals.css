@@ -13,3 +13,8 @@ body {
   background: var(--background);
   font-family: --font-famaly, serif;
 }
+
+body,
+html {
+  overflow-x: hidden;
+}

@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div
       className={`transform transition-all duration-700 
-        flex flex-col h-screen items-center gap-12 mt-32 ${
+        flex flex-col  items-center gap-12 py-32 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
         }`}
     >

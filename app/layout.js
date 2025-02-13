@@ -1,13 +1,9 @@
 import { Lora } from "next/font/google";
-import Image from "next/image";
 import "./globals.css";
 
 import { DataProvider } from "./context/data-meniu";
 
-import Footer from "./component/footer";
-import FrameBotton from "./component/frame-botton";
-import FrameTop from "./component/frame-top";
-import Header from "./component/header";
+import ClientLayout from "./client-layout";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -26,13 +22,9 @@ export default function RootLayout({ children }) {
     <DataProvider>
       <html lang="en">
         <body
-          className={`${lora.variable}  antialiased h-full max-w-[430px] relative mx-auto px-2`}
+          className={`${lora.variable}  antialiased min-h-screen max-w-[430px] relative  px-2`}
         >
-          <Header />
-          <FrameTop />
-          {children}
-          <Footer />
-          <FrameBotton />
+          <ClientLayout>{children}</ClientLayout>
         </body>
       </html>
     </DataProvider>

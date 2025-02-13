@@ -40,7 +40,7 @@ export default function RenderItemMeniu({ item, leftPage, rightPage }) {
   }
 
   return (
-    <div {...handlers} className="  h-full w-full px-4 pb-6 relative">
+    <div {...handlers} className="   w-full px-4 pb-6 relative">
       {arrData?.map((item, index) => (
         <div key={index}>
           <h1 className="flex justify-center items-center font-bold text-[18px] pt-4">
@@ -56,7 +56,9 @@ export default function RenderItemMeniu({ item, leftPage, rightPage }) {
             </ul>
             <ul className="flex-1 list-none">
               {item.listGramm?.map((item, id) => (
-                <li key={id}>{item}</li>
+                <li key={id} className="text-center">
+                  {item}
+                </li>
               ))}
             </ul>
             <ul className="list-none w-1/4 text-right ">
