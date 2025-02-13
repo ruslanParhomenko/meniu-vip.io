@@ -17,14 +17,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${lora.variable}  antialiased`}>
-        <h1 className="text-center text-3xl font-bold py-10">MENIU</h1>
+      <body className={`${lora.variable}  antialiased h-full`}>
+        <h1 className="text-center text-3xl font-bold py-5">MENIU</h1>
         {children}
-        <footer className=" flex items-center justify-center pb-5">
+        <footer className=" flex items-center justify-center pt-8 pb-4">
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
             href="https://casino-nuovo.md/"
-            target="_blank"
+            // target="_blank"
             rel="noopener noreferrer"
           >
             <Image

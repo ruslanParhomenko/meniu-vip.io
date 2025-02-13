@@ -1,18 +1,13 @@
-"use client";
+"use client"; // Нужно, если используем `useRouter()`
 
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function BarPage() {
+export default function SecondPage() {
   const router = useRouter();
-
-  const handlers = useSwipeable({
-    onSwipedLeft: () => router.push("/second-page"), // Свайп влево → переход на вторую страницу
-  });
 
   const [data, setData] = useState(null);
 
@@ -27,7 +22,7 @@ export default function BarPage() {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        setData(data[0]);
+        setData(data[1]);
       } catch (error) {
         console.error("Ошибка:", error);
       }
@@ -39,6 +34,10 @@ export default function BarPage() {
 
   const url =
     "https://script.google.com/macros/s/AKfycbxPflSkFgJkrhYK-4u9NAmj_GF8MLsMAIRy5MHLPQ17Y8tmh2rrJxYXVnanhW2moHM/exec";
+
+  const handlers = useSwipeable({
+    onSwipedRight: () => router.push("/bar"),
+  });
   return (
     <div {...handlers} className="  h-full w-full px-8 ">
       {data?.map((item, index) => (
@@ -62,17 +61,17 @@ export default function BarPage() {
           </h1>
           <div className="flex  gap-4 text-[14px] px-5">
             <ul className="list-none w-1/2">
-              {item.listItem?.map((item, id) => (
+              {item.listItem2?.map((item, id) => (
                 <li key={id}>{item}</li>
               ))}
             </ul>
             <ul className="flex-1 list-none">
-              {item.listGramm?.map((item, id) => (
+              {item.listGramm2?.map((item, id) => (
                 <li key={id}>{item}</li>
               ))}
             </ul>
             <ul className="list-none w-1/4 text-right ">
-              {item.listPrice?.map((item, id) => (
+              {item.listPrice2?.map((item, id) => (
                 <li key={id}>{item}&nbsp;lei</li>
               ))}
             </ul>
