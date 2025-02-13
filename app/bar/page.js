@@ -38,7 +38,7 @@ export default function BarPage() {
   }
 
   return (
-    <div {...handlers} className="  h-full w-full px-8 ">
+    <div {...handlers} className="  h-full w-full px-8 pb-6 relative">
       {dataBar1?.map((item, index) => (
         <div key={index}>
           <h1 className="flex justify-center items-center font-bold text-[18px] pt-4">
@@ -77,6 +77,10 @@ export default function BarPage() {
           </div>
         </div>
       ))}
+      <span className="text-xs absolute -bottom-2 left-12">← go to home</span>
+      <span className="text-xs absolute -bottom-2 right-12">
+        go to next page →
+      </span>
     </div>
   );
 }
