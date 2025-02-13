@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
                 width={16}
                 height={16}
               />
-              go to casino-nova.md →
+              go to casino.md →
             </a>
           </footer>
           <Image
