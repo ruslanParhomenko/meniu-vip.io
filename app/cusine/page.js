@@ -59,7 +59,7 @@ export default function CusinePage() {
             />
           </h1>
           <div className="flex  gap-4 text-[14px] px-5">
-            <ul className="list-none w-1/2">
+            <ul className="list-none w-[90%]">
               {item.listItem3?.map((item, id) => (
                 <li key={id}>{item}</li>
               ))}
