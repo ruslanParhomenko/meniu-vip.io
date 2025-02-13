@@ -20,7 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <DataProvider>
       <html lang="en">
-        <body className={`${lora.variable}  antialiased h-full relative`}>
+        <body
+          className={`${lora.variable}  antialiased h-full max-w-[430px] relative mx-auto`}
+        >
           <Image
             className="absolute top-0.5 right-0.5"
             // ria-hidden

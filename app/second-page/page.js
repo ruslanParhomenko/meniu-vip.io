@@ -35,7 +35,7 @@ export default function SecondPage() {
   }
 
   return (
-    <div {...handlers} className="  h-full w-full px-8 relative">
+    <div {...handlers} className="  h-full w-full px-8 relative pb-4">
       {dataBar2?.map((item, index) => (
         <div key={index}>
           <h1 className="flex justify-center items-center font-bold text-[18px] pt-4">
@@ -74,10 +74,18 @@ export default function SecondPage() {
           </div>
         </div>
       ))}
-      <span className="text-xs absolute -bottom-2 left-12">
+      <button
+        onClick={() => router.back()}
+        className="text-xs absolute -bottom-4 left-12"
+      >
         ← go to previous page
-      </span>
-      <span className="text-xs absolute -bottom-2 right-12">go to home →</span>
+      </button>
+      <button
+        onClick={() => router.push("/")}
+        className="text-xs absolute -bottom-4 right-12"
+      >
+        go to home →
+      </button>
     </div>
   );
 }

@@ -31,7 +31,7 @@ export default function BarPage() {
   // Индикатор ошибки
   if (error) {
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen pb-4">
         Произошла ошибка: {error.message}
       </div>
     );
@@ -77,10 +77,18 @@ export default function BarPage() {
           </div>
         </div>
       ))}
-      <span className="text-xs absolute -bottom-2 left-12">← go to home</span>
-      <span className="text-xs absolute -bottom-2 right-12">
+      <button
+        onClick={() => router.push("/")}
+        className="text-xs absolute -bottom-2 left-12"
+      >
+        ← go to home
+      </button>
+      <button
+        onClick={() => router.push("/second-page")}
+        className="text-xs absolute -bottom-2 right-12"
+      >
         go to next page →
-      </span>
+      </button>
     </div>
   );
 }
