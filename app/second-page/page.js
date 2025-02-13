@@ -4,43 +4,39 @@ import { useRouter } from "next/navigation";
 import { useSwipeable } from "react-swipeable";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useData } from "../context/data-meniu";
 
 export default function SecondPage() {
   const router = useRouter();
 
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url, {
-          method: "GET",
-          headers: { Accept: "application/json" },
-        });
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        setData(data[1]);
-      } catch (error) {
-        console.error("Ошибка:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-  console.log(data);
-
-  const url =
-    "https://script.google.com/macros/s/AKfycbxPflSkFgJkrhYK-4u9NAmj_GF8MLsMAIRy5MHLPQ17Y8tmh2rrJxYXVnanhW2moHM/exec";
+  const { data, loading, error } = useData();
+  const dataBar2 = data?.[1];
 
   const handlers = useSwipeable({
     onSwipedRight: () => router.push("/bar"),
+    onSwipedLeft: () => router.push("/"),
   });
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        Загрузка...
+      </div>
+    );
+  }
+
+  // Индикатор ошибки
+  if (error) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        Произошла ошибка: {error.message}
+      </div>
+    );
+  }
+
   return (
     <div {...handlers} className="  h-full w-full px-8 ">
-      {data?.map((item, index) => (
+      {dataBar2?.map((item, index) => (
         <div key={index}>
           <h1 className="flex justify-center items-center font-bold text-[18px] pt-4">
             <Image

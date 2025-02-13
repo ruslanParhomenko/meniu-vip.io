@@ -4,44 +4,42 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 
+import { useData } from "../context/data-meniu";
+
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 export default function BarPage() {
+  const { data, loading, error } = useData();
+  const dataBar1 = data?.[0];
+
   const router = useRouter();
 
   const handlers = useSwipeable({
     onSwipedLeft: () => router.push("/second-page"), // Свайп влево → переход на вторую страницу
+    onSwipedRight: () => router.push("/"),
   });
 
-  const [data, setData] = useState(null);
+  // Индикатор загрузки
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        Загрузка...
+      </div>
+    );
+  }
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url, {
-          method: "GET",
-          headers: { Accept: "application/json" },
-        });
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        setData(data[0]);
-      } catch (error) {
-        console.error("Ошибка:", error);
-      }
-    };
+  // Индикатор ошибки
+  if (error) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        Произошла ошибка: {error.message}
+      </div>
+    );
+  }
 
-    fetchData();
-  }, []);
-  console.log(data);
-
-  const url =
-    "https://script.google.com/macros/s/AKfycbxPflSkFgJkrhYK-4u9NAmj_GF8MLsMAIRy5MHLPQ17Y8tmh2rrJxYXVnanhW2moHM/exec";
   return (
     <div {...handlers} className="  h-full w-full px-8 ">
-      {data?.map((item, index) => (
+      {dataBar1?.map((item, index) => (
         <div key={index}>
           <h1 className="flex justify-center items-center font-bold text-[18px] pt-4">
             <Image
