@@ -4,6 +4,11 @@ import "./globals.css";
 
 import { DataProvider } from "./context/data-meniu";
 
+import Footer from "./component/footer";
+import FrameBotton from "./component/frame-botton";
+import FrameTop from "./component/frame-top";
+import Header from "./component/header";
+
 const lora = Lora({
   variable: "--font-lora",
   subsets: ["latin"],
@@ -21,59 +26,13 @@ export default function RootLayout({ children }) {
     <DataProvider>
       <html lang="en">
         <body
-          className={`${lora.variable}  antialiased h-full max-w-[430px] relative mx-auto`}
+          className={`${lora.variable}  antialiased h-full max-w-[430px] relative mx-auto px-2`}
         >
-          <Image
-            className="absolute top-0.5 right-0.5"
-            // ria-hidden
-            src="../2.svg"
-            alt="2"
-            width={80}
-            height={80}
-          />
-          <Image
-            className="absolute top-0.5 left-0.5 -rotate-90 "
-            // ria-hidden
-            src="../2.svg"
-            alt="2"
-            width={80}
-            height={80}
-          />
-          <h1 className="text-center text-3xl font-bold py-5">MENIU</h1>
+          <Header />
+          <FrameTop />
           {children}
-          <footer className=" flex items-center justify-center pt-8 pb-4">
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://casino-nuovo.md/"
-              // target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                aria-hidden
-                src="/nova-casino.svg"
-                alt="casino"
-                width={16}
-                height={16}
-              />
-              go to casino.md →
-            </a>
-          </footer>
-          <Image
-            className="absolute bottom-0 right-0 rotate-90"
-            // ria-hidden
-            src="../2.svg"
-            alt="2"
-            width={80}
-            height={80}
-          />
-          <Image
-            className="absolute bottom-0.5 left-0.5 rotate-180"
-            // ria-hidden
-            src="../2.svg"
-            alt="2"
-            width={80}
-            height={80}
-          />
+          <Footer />
+          <FrameBotton />
         </body>
       </html>
     </DataProvider>

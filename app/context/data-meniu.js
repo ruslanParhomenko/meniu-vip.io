@@ -15,7 +15,7 @@ export const DataProvider = ({ children }) => {
   const [error, setError] = useState(null);
 
   const url =
-    "https://script.google.com/macros/s/AKfycbw4TXftteP5c-unHk7ZKegt7h_17f76zGVVje1RisAOadLcUQ42MXeaBhQr544SI-_qcg/exec";
+    "https://script.google.com/macros/s/AKfycbxGnkTqM-5UVMq586FT9PKX5c4IL4QD46iuJuWsEzgdnB4bugbjxYE0KnWLVw-O6JIJ/exec";
 
   useEffect(() => {
     const fetchData = async () => {
