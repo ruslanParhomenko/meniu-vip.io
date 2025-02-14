@@ -3,6 +3,8 @@
 import { useRouter } from "next/navigation";
 import { useSwipeable } from "react-swipeable";
 
+import ButtonNavigationPage from "./button-navigation-page";
+
 import { useData } from "../context/data-meniu";
 
 import Image from "next/image";
@@ -41,6 +43,7 @@ export default function RenderItemMeniu({ item, leftPage, rightPage }) {
 
   return (
     <div {...handlers} className="   w-full px-4 pb-6 relative">
+      <ButtonNavigationPage leftPage={leftPage} rightPage={rightPage} />
       {arrData?.map((item, index) => (
         <div key={index}>
           <h1 className="flex justify-center items-center font-bold text-[18px] pt-4">
@@ -69,18 +72,8 @@ export default function RenderItemMeniu({ item, leftPage, rightPage }) {
           </div>
         </div>
       ))}
-      <button
-        onClick={() => router.push(leftPage)}
-        className="text-xs absolute -bottom-2 left-12"
-      >
-        ← prev
-      </button>
-      <button
-        onClick={() => router.push(rightPage)}
-        className="text-xs absolute -bottom-2 right-12"
-      >
-        next →
-      </button>
+
+      <ButtonNavigationPage leftPage={leftPage} rightPage={rightPage} />
     </div>
   );
 }

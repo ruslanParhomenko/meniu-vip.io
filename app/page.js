@@ -13,7 +13,7 @@ export default function Home() {
     <div
       className={`transform transition-all duration-700 
         flex flex-col  items-center gap-12 py-32 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+          isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
         }`}
     >
       <BotonStartMeniu page="/bar" text="BAR" />
