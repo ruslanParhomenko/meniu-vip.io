@@ -1,6 +1,11 @@
 import { Lora } from "next/font/google";
 import "./globals.css";
 
+import Footer from "./component/footer";
+import FrameBotton from "./component/frame-botton";
+import FrameTop from "./component/frame-top";
+import Header from "./component/header";
+
 import { DataProvider } from "./context/data-meniu";
 
 import ClientLayout from "./client-layout";
@@ -24,7 +29,11 @@ export default function RootLayout({ children }) {
         <body
           className={`${lora.variable}  antialiased min-h-screen max-w-[430px] relative mx-auto px-2`}
         >
+          <Header />
+          <FrameTop />
           <ClientLayout>{children}</ClientLayout>
+          <Footer />
+          <FrameBotton />
         </body>
       </html>
     </DataProvider>
