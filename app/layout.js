@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <DataProvider>
       <html lang="en">
         <body
-          className={`${lora.variable}  antialiased min-h-screen max-w-[430px] relative  px-2`}
+          className={`${lora.variable}  antialiased min-h-screen max-w-[430px] relative mx-auto px-2`}
         >
           <ClientLayout>{children}</ClientLayout>
         </body>
