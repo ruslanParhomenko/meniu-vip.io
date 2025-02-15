@@ -27,7 +27,7 @@ export default function RenderItemMeniu({ item, leftPage, rightPage }) {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen pb-20">
         Загрузка...
       </div>
     );
@@ -46,12 +46,12 @@ export default function RenderItemMeniu({ item, leftPage, rightPage }) {
       <ButtonNavigationPage leftPage={leftPage} rightPage={rightPage} />
       {arrData?.map((item, index) => (
         <div key={index}>
-          <h1 className="flex justify-center items-center font-bold text-[18px] pt-4">
+          <h1 className="flex justify-center items-center font-bold text-[18px] py-5">
             <Image src="../dot.svg" width={16} height={16} priority alt="dot" />
             {item.title}
             <Image src="../dot.svg" width={16} height={16} priority alt="dot" />
           </h1>
-          <div className="flex  gap-4 text-[14px] ">
+          <div className="flex  gap-4 text-[16px] ">
             <ul className="list-none w-1/2">
               {item.listItem?.map((item, id) => (
                 <li key={id}>{item}</li>

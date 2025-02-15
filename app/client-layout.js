@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
+
   return (
     <AnimatePresence mode="wait">
       <motion.div
