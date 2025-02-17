@@ -10,6 +10,7 @@ import { useData } from "../context/data-meniu";
 import Image from "next/image";
 
 export default function RenderItemMeniu({ item, leftPage, rightPage }) {
+  console.log(item, leftPage, rightPage);
   const router = useRouter();
   const handlers = useSwipeable({
     onSwipedLeft: () => router.push(rightPage),
@@ -51,7 +52,7 @@ export default function RenderItemMeniu({ item, leftPage, rightPage }) {
             {item.title}
             <Image src="../dot.svg" width={16} height={16} priority alt="dot" />
           </h1>
-          <div className="flex  gap-4 text-[16px] ">
+          <div className="flex  gap-4 text-[14px] pt-1 ">
             <ul className="list-none w-1/2">
               {item.listItem?.map((item, id) => (
                 <li key={id}>{item}</li>

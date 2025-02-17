@@ -12,12 +12,15 @@
   "dependencies": {
     "framer-motion": "^12.4.2",
     "next": "15.1.7",
+    "next-intl": "^3.26.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-swipeable": "^7.0.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/node": "22.13.4",
+    "@types/react": "19.0.9",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "postcss": "^8",

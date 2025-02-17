@@ -1,8 +1,15 @@
 "use client";
-import BotonStartMeniu from "./component/botton-start-meniu";
+import BotonStartMeniu from "../component/botton-start-meniu";
 import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+
+import { useTranslations } from "next-intl";
+import { Link } from "../../i18n/routing";
 
 export default function Home() {
+  const locale = useParams();
+
+  const t = useTranslations("home");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -16,8 +23,8 @@ export default function Home() {
           isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
         }`}
     >
-      <BotonStartMeniu page="/bar" text="BAR" />
-      <BotonStartMeniu page="/cusine" text="CUSINE" />
+      <BotonStartMeniu page={`/${locale.locale}/bar`} text={t("bar")} />
+      <BotonStartMeniu page={`/${locale.locale}/cusine`} text={t("cusine")} />
     </div>
   );
 }

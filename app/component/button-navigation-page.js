@@ -2,18 +2,20 @@
 
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 
 export default function ButtonNavigationPage({ leftPage, rightPage }) {
+  const locale = useParams();
   const router = useRouter();
   const pathname = usePathname();
 
   const getTextPrev = () => {
     switch (pathname) {
-      case "/bar":
+      case `/${locale.locale}/bar`:
         return "← home";
-      case "/bar-page-2":
+      case `/${locale.locale}/bar-page-2`:
         return "← prev";
-      case "/cusine":
+      case `/${locale.locale}/cusine`:
         return "← home";
       default:
         return null;
@@ -21,11 +23,11 @@ export default function ButtonNavigationPage({ leftPage, rightPage }) {
   };
   const getTextNext = () => {
     switch (pathname) {
-      case "/bar":
+      case `/${locale.locale}/bar`:
         return "next →";
-      case "/bar-page-2":
+      case `/${locale.locale}/bar-page-2`:
         return "home →";
-      case "/cusine":
+      case `/${locale.locale}/cusine`:
         return null;
       default:
         return null;
