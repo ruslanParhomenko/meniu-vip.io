@@ -1,5 +1,11 @@
+"use client";
+
 import RenderItemMeniu from "../../component/render-item-meniu";
+import { useParams } from "next/navigation";
 
 export default function BarPage2() {
-  return <RenderItemMeniu item="bar1" leftPage="/bar" rightPage="/" />;
+  const { locale } = useParams();
+  return (
+    <RenderItemMeniu item="bar1" leftPage={`/${locale}/bar`} rightPage="/" />
+  );
 }

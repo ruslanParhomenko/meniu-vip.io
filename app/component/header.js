@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="flex items-center justify-center py-8">
+    <div className="flex items-center justify-center pt-8 pb-6">
       <h1 className="flex items-center gap-2 text-center text-3xl font-bold  ">
         <Image
           className=" -rotate-90"

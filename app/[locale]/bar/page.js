@@ -4,7 +4,6 @@ import { useParams } from "next/navigation";
 
 export default function BarPage() {
   const { locale } = useParams();
-  console.log(locale);
   return (
     <RenderItemMeniu
       item="bar"
