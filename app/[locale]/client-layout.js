@@ -28,7 +28,7 @@ export default function ClientLayout({ children, locale }) {
           {children}
         </motion.div>
       </AnimatePresence>
-      <Footer locale={locale} />
+      <Footer />
       <FrameBotton />
     </DataProvider>
   );

@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 export default function Header() {
   const t = useTranslations("home");
   return (
-    <div className="flex items-center justify-center py-8">
+    <header className="flex items-center justify-center pt-8 pb-4">
       <h1 className="flex items-center gap-2 text-center text-3xl font-bold  ">
         <Image
           className=" -rotate-90"
@@ -24,6 +24,6 @@ export default function Header() {
           priority
         />
       </h1>
-    </div>
+    </header>
   );
 }

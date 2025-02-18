@@ -7,16 +7,20 @@ import ButtonNavigationPage from "./button-navigation-page";
 
 import { useData } from "../context/data-meniu";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 import Image from "next/image";
 
 export default function RenderItemMeniu({ item, leftPage, rightPage, lang }) {
   const t = useTranslations(lang);
+  const { locale } = useParams();
+  const left = `/${locale}${leftPage}`;
+  const right = `/${locale}${rightPage}`;
 
   const router = useRouter();
   const handlers = useSwipeable({
-    onSwipedLeft: () => router.push(rightPage),
-    onSwipedRight: () => router.push(leftPage),
+    onSwipedLeft: () => router.push(right),
+    onSwipedRight: () => router.push(left),
   });
 
   const selectArr = {
@@ -27,7 +31,6 @@ export default function RenderItemMeniu({ item, leftPage, rightPage, lang }) {
 
   const { data, loading, error } = useData();
   const arrData = data?.[selectArr[item]];
-  console.log(arrData);
 
   if (loading) {
     return (
@@ -46,8 +49,8 @@ export default function RenderItemMeniu({ item, leftPage, rightPage, lang }) {
   }
 
   return (
-    <div {...handlers} className="   w-full px-4 pb-6 relative">
-      <ButtonNavigationPage leftPage={leftPage} rightPage={rightPage} />
+    <div {...handlers} className="   w-full px-4 pb-4 relative">
+      <ButtonNavigationPage leftPage={left} rightPage={right} />
       {arrData?.map((item, index) => (
         <div key={index}>
           <h1 className="flex justify-center items-center font-bold text-[18px] py-5">
@@ -58,7 +61,7 @@ export default function RenderItemMeniu({ item, leftPage, rightPage, lang }) {
           <div className="flex  gap-4 text-[14px] pt-1 ">
             <ul className="list-none w-1/2">
               {item.listItem?.map((item, id) => (
-                <li key={id}>{item}</li>
+                <li key={id}>{item === "cusine" ? t("cusine") : item}</li>
               ))}
             </ul>
             <ul className="flex-1 list-none">
@@ -79,7 +82,7 @@ export default function RenderItemMeniu({ item, leftPage, rightPage, lang }) {
         </div>
       ))}
 
-      <ButtonNavigationPage leftPage={leftPage} rightPage={rightPage} />
+      <ButtonNavigationPage leftPage={left} rightPage={right} />
     </div>
   );
 }
