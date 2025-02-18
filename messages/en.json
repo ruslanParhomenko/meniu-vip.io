@@ -24,16 +24,16 @@
     "Coffe": "Coffee",
     "Tea": "Tea",
     "Snacks": "Snacks",
-    "Beer": "Beer",
+    "Beer": "Beer"
+  },
+
+  "cusine": {
     "Breakfas": "Breakfast",
     "Salds & Appetixers": "Salads & Appetizers",
     "Soups": "Soups",
     "Second Courses": "Main Courses",
     "Side Dishes": "Side Dishes",
-    "Desserts": "Desserts"
-  },
-
-  "cusine": {
+    "Desserts": "Desserts",
     "lei": "lei",
     "Omlette": "Omlette",
     "Oatmeal with fresh fruits": "Oatmeal with fresh fruits",

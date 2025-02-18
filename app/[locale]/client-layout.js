@@ -10,7 +10,7 @@ import Header from "../component/header";
 
 import { DataProvider } from "../context/data-meniu";
 
-export default function ClientLayout({ children }) {
+export default function ClientLayout({ children, locale }) {
   const pathname = usePathname();
 
   return (
@@ -28,7 +28,7 @@ export default function ClientLayout({ children }) {
           {children}
         </motion.div>
       </AnimatePresence>
-      <Footer />
+      <Footer locale={locale} />
       <FrameBotton />
     </DataProvider>
   );

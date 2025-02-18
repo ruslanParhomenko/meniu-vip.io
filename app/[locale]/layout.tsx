@@ -33,8 +33,8 @@ export default async function RootLayout({ children, params }) {
       <body
         className={`${lora.variable} antialiased min-h-screen max-w-[430px] relative mx-auto px-2`}
       >
-        <NextIntlClientProvider locale="{locale}" messages={messages}>
-          <ClientLayout>{children}</ClientLayout>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ClientLayout locale={locale}>{children}</ClientLayout>
         </NextIntlClientProvider>
       </body>
     </html>

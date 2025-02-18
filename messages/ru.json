@@ -25,15 +25,15 @@
     "Coffe": "Кофе",
     "Tea": "Чай",
     "Snacks": "Закуски",
-    "Beer": "Пиво",
+    "Beer": "Пиво"
+  },
+  "cusine": {
     "Breakfas": "Завтрак",
     "Salds & Appetixers": "Салаты и закуски",
     "Soups": "Супы",
     "Second Courses": "Основные блюда",
     "Side Dishes": "Гарниры",
-    "Desserts": "Десерты"
-  },
-  "cusine": {
+    "Desserts": "Десерты",
     "lei": "лей",
     "Omlette": "Омлет",
     "Oatmeal with fresh fruits": "Каша с фруктами",

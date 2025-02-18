@@ -24,15 +24,15 @@
     "Coffe": "Cafea",
     "Tea": "Ceai",
     "Snacks": "Gustări",
-    "Beer": "Bere",
+    "Beer": "Bere"
+  },
+  "cusine": {
     "Breakfas": "Mic dejun",
     "Salds & Appetixers": "Salate și Aperitive",
     "Soups": "Supe",
     "Second Courses": "Feluri principale",
     "Side Dishes": "Garnituri",
-    "Desserts": "Deserturi"
-  },
-  "cusine": {
+    "Desserts": "Deserturi",
     "lei": "lei",
     "Omlette": "Omletă",
     "Oatmeal with fresh fruits": "Fulgi de ovăz cu fructe proaspete",

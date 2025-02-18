@@ -34,7 +34,7 @@ export default function ButtonNavigationPage({ leftPage, rightPage }) {
     }
   };
   return (
-    <div className=" flex items-center justify-center py-4">
+    <div className=" flex items-center justify-center pt-4">
       <button
         onClick={() => router.push(leftPage)}
         className="text-xs absolute  left-12 "
