@@ -18,7 +18,7 @@ export const DataProvider = ({ children }) => {
       try {
         setLoading(true);
         const response = await fetch(API_URL, {
-          cache: "no-store",
+          // cache: "no-store",
           method: "GET",
           headers: { Accept: "application/json" },
         });
