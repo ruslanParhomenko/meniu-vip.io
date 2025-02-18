@@ -6,11 +6,13 @@ import { useSwipeable } from "react-swipeable";
 import ButtonNavigationPage from "./button-navigation-page";
 
 import { useData } from "../context/data-meniu";
+import { useTranslations } from "next-intl";
 
 import Image from "next/image";
 
-export default function RenderItemMeniu({ item, leftPage, rightPage }) {
-  console.log(item, leftPage, rightPage);
+export default function RenderItemMeniu({ item, leftPage, rightPage, lang }) {
+  const t = useTranslations(lang);
+
   const router = useRouter();
   const handlers = useSwipeable({
     onSwipedLeft: () => router.push(rightPage),
@@ -25,6 +27,7 @@ export default function RenderItemMeniu({ item, leftPage, rightPage }) {
 
   const { data, loading, error } = useData();
   const arrData = data?.[selectArr[item]];
+  console.log(arrData);
 
   if (loading) {
     return (
@@ -49,7 +52,7 @@ export default function RenderItemMeniu({ item, leftPage, rightPage }) {
         <div key={index}>
           <h1 className="flex justify-center items-center font-bold text-[18px] py-5">
             <Image src="../dot.svg" width={16} height={16} priority alt="dot" />
-            {item.title}
+            {t(item.title)}
             <Image src="../dot.svg" width={16} height={16} priority alt="dot" />
           </h1>
           <div className="flex  gap-4 text-[14px] pt-1 ">
@@ -67,7 +70,9 @@ export default function RenderItemMeniu({ item, leftPage, rightPage }) {
             </ul>
             <ul className="list-none w-1/4 text-right ">
               {item.listPrice?.map((item, id) => (
-                <li key={id}>{item}&nbsp;lei</li>
+                <li key={id}>
+                  {item}&nbsp;&nbsp;{t("lei")}
+                </li>
               ))}
             </ul>
           </div>

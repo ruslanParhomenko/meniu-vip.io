@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
+  const t = useTranslations("home");
   return (
     <div className="flex items-center justify-center py-8">
       <h1 className="flex items-center gap-2 text-center text-3xl font-bold  ">
@@ -12,7 +14,7 @@ export default function Header() {
           height={20}
           priority
         />
-        MENIU
+        {t("menu")}
         <Image
           className=" rotate-90"
           src="/meniu.svg"

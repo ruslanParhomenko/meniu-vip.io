@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 
 import { useTranslations } from "next-intl";
-import { Link } from "../../i18n/routing";
+import LanguageSwitcher from "../component/button-lang-switch";
 
 export default function Home() {
   const locale = useParams();
@@ -25,6 +25,11 @@ export default function Home() {
     >
       <BotonStartMeniu page={`/${locale.locale}/bar`} text={t("bar")} />
       <BotonStartMeniu page={`/${locale.locale}/cusine`} text={t("cusine")} />
+      <div className="flex justify-center items-center gap-4 mt-auto pt-5">
+        <LanguageSwitcher page={`/ru`} text={`RU`} />
+        <LanguageSwitcher page={`/ro`} text={`RO`} />
+        <LanguageSwitcher page={`/en`} text={`EN`} />
+      </div>
     </div>
   );
 }

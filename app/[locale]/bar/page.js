@@ -10,6 +10,7 @@ export default function BarPage() {
       item="bar"
       leftPage={`/${locale}`}
       rightPage={`/${locale}/bar-page-2`}
+      lang="bar"
     />
   );
 }
