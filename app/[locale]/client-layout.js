@@ -8,13 +8,13 @@ import FrameBotton from "../component/frame-botton";
 import FrameTop from "../component/frame-top";
 import Header from "../component/header";
 
-import { DataProvider } from "../context/data-meniu";
+// import { DataProvider } from "../context/data-meniu";
 
 export default function ClientLayout({ children, locale }) {
   const pathname = usePathname();
 
   return (
-    <DataProvider>
+    <>
       <Header />
       <FrameTop />
       <AnimatePresence mode="wait">
@@ -30,6 +30,6 @@ export default function ClientLayout({ children, locale }) {
       </AnimatePresence>
       <Footer />
       <FrameBotton />
-    </DataProvider>
+    </>
   );
 }

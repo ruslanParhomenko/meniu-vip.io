@@ -5,14 +5,14 @@ import { useSwipeable } from "react-swipeable";
 
 import ButtonNavigationPage from "./button-navigation-page";
 
-import { useData } from "../context/data-meniu";
+// import { useData } from "../context/data-meniu";
+import { dataTest } from "../context/dataTest";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 
 import Image from "next/image";
 
 export default function RenderItemMeniu({ item, leftPage, rightPage, lang }) {
-  console.log(item === "cusine");
   const t = useTranslations(lang);
   const { locale } = useParams();
   const left = `/${locale}${leftPage}`;
@@ -30,24 +30,24 @@ export default function RenderItemMeniu({ item, leftPage, rightPage, lang }) {
     cusine: 2,
   };
 
-  const { data, loading, error } = useData();
-  const arrData = data?.[selectArr[item]];
+  // const { loading, error } = useData();
+  const arrData = dataTest?.[selectArr[item]];
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen pb-20">
-        Загрузка...
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="flex justify-center items-center h-screen pb-20">
+  //       Загрузка...
+  //     </div>
+  //   );
+  // }
 
-  if (error) {
-    return (
-      <div className="flex justify-center items-center h-screen pb-4">
-        Произошла ошибка: {error.message}
-      </div>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <div className="flex justify-center items-center h-screen pb-4">
+  //       Произошла ошибка: {error.message}
+  //     </div>
+  //   );
+  // }
 
   return (
     <div {...handlers} className="   w-full px-4 pb-4 relative">

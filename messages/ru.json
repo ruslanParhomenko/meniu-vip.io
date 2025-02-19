@@ -2,7 +2,8 @@
   "home": {
     "menu": "МЕНЮ",
     "bar": "БАР",
-    "cusine": "КУХНЯ"
+    "cusine": "КУХНЯ",
+    "Language": "Язык"
   },
 
   "bar": {

@@ -2,7 +2,8 @@
   "home": {
     "menu": "MENU",
     "bar": "BAR",
-    "cusine": "CUSINE"
+    "cusine": "CUSINE",
+    "Language": "Language"
   },
   "bar": {
     "lei": "lei",
@@ -49,7 +50,7 @@
     "Veal carpaccio": "Veal carpaccio",
     "Greel salad": "Greek salad",
     "Eggplant caviar": "Eggplant caviar",
-    "Zama": "Zama",
+    "Zama": "Chicken soup",
     "Mushroom cream soup": "Mushroom cream soup",
     "Grilled salmon steak": "Grilled salmon steak",
     "Grilled Dorada": "Grilled Dorada",

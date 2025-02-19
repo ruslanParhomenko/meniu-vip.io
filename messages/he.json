@@ -2,7 +2,8 @@
   "home": {
     "menu": "תפריט",
     "bar": "בר",
-    "cusine": "מטבח"
+    "cusine": "מטבח",
+    "Language": "שפה"
   },
   "bar": {
     "lei": "לאי",
@@ -48,7 +49,7 @@
     "Veal carpaccio": "קרפצ'יו עגל",
     "Greel salad": "סלט יווני",
     "Eggplant caviar": "קוויאר חצילים",
-    "Zama": "זאמה",
+    "Zama": "מרק עוף",
     "Mushroom cream soup": "מרק שמנת פטריות",
     "Grilled salmon steak": "סטייק סלמון בגריל",
     "Grilled Dorada": "דוראדה בגריל",

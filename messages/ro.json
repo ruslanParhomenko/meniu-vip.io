@@ -2,7 +2,8 @@
   "home": {
     "menu": "MENIU",
     "bar": "BAR",
-    "cusine": "BUCATARIE"
+    "cusine": "BUCATARIE",
+    "Language": "Limba"
   },
   "bar": {
     "lei": "lei",
