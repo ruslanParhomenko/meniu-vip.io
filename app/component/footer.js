@@ -8,6 +8,7 @@ export default function Footer() {
         <LanguageSwitcher page={`ru`} text={`RU`} />
         <LanguageSwitcher page={`ro`} text={`RO`} />
         <LanguageSwitcher page={`en`} text={`EN`} />
+        <LanguageSwitcher page={`he`} text={`HE`} />
       </div>
       <a
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
