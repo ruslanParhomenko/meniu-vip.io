@@ -12,6 +12,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 
 export default function RenderItemMeniu({ item, leftPage, rightPage, lang }) {
+  console.log(item === "cusine");
   const t = useTranslations(lang);
   const { locale } = useParams();
   const left = `/${locale}${leftPage}`;
@@ -51,30 +52,30 @@ export default function RenderItemMeniu({ item, leftPage, rightPage, lang }) {
   return (
     <div {...handlers} className="   w-full px-4 pb-4 relative">
       <ButtonNavigationPage leftPage={left} rightPage={right} />
-      {arrData?.map((item, index) => (
+      {arrData?.map((el, index) => (
         <div key={index}>
           <h1 className="flex justify-center items-center font-bold text-[18px] py-5">
             <Image src="../dot.svg" width={16} height={16} priority alt="dot" />
-            {t(item.title)}
+            {t(el.title)}
             <Image src="../dot.svg" width={16} height={16} priority alt="dot" />
           </h1>
           <div className="flex  gap-4 text-[14px] pt-1 ">
             <ul className="list-none w-1/2">
-              {item.listItem?.map((item, id) => (
-                <li key={id}>{item === "cusine" ? t("cusine") : item}</li>
+              {el.listItem?.map((el, id) => (
+                <li key={id}>{item === "cusine" ? t(el) : el}</li>
               ))}
             </ul>
             <ul className="flex-1 list-none">
-              {item.listGramm?.map((item, id) => (
+              {el.listGramm?.map((el, id) => (
                 <li key={id} className="text-center">
-                  {item}
+                  {el}
                 </li>
               ))}
             </ul>
             <ul className="list-none w-1/4 text-right ">
-              {item.listPrice?.map((item, id) => (
+              {el.listPrice?.map((el, id) => (
                 <li key={id}>
-                  {item}&nbsp;&nbsp;{t("lei")}
+                  {el}&nbsp;&nbsp;{t("lei")}
                 </li>
               ))}
             </ul>
