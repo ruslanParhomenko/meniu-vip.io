@@ -98,6 +98,15 @@ export default function DailyMenuPage() {
         {t("Desserts")}
         <Image src="../dot.svg" width={16} height={16} priority alt="dot" />
       </h1>
+      <div className="flex flex-col w-full justify-center items-center gap-4 text-[14px] pt-1 ">
+        <ul className="list-none w-1/2 flex flex-col items-center justify-center">
+          {data.titleDesserts?.map((el, id) => (
+            <li key={id} className={id % 2 === 0 ? "font-bold" : ""}>
+              {id % 2 === 0 ? ts(el) : el}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
