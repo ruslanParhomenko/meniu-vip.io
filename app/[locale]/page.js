@@ -18,12 +18,16 @@ export default function Home() {
   return (
     <div
       className={`transform transition-all duration-700 
-        flex flex-col  items-center gap-12 py-32 ${
+        flex flex-col  items-center gap-12 py-24 ${
           isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
         }`}
     >
       <BotonStartMeniu page={`/${locale.locale}/bar`} text={t("bar")} />
       <BotonStartMeniu page={`/${locale.locale}/cusine`} text={t("cusine")} />
+      <BotonStartMeniu
+        page={`/${locale.locale}/daily-menu`}
+        text={t("Daily Menu")}
+      />
     </div>
   );
 }

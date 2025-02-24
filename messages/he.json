@@ -3,7 +3,8 @@
     "menu": "תפריט",
     "bar": "בר",
     "cusine": "מטבח",
-    "Language": "שפה"
+    "Language": "שפה",
+    "Daily Menu": "ארוחות היום"
   },
   "bar": {
     "lei": "לאי",
@@ -71,5 +72,49 @@
     "Ice-Cream": "גלידה",
     "Tiramisu": "טירמיסו",
     "CheeseCake": "עוגת גבינה"
+  },
+  "dailyMenu": {
+    "Salata Vinegret": "סלט ויניגרט",
+    "Salata cu brînza de capra": "סלט עם גבינת עיזים",
+    "Salată de pere cu brânză": "סלט אגסים עם גבינה",
+    "Salata cu ficat de pui": "סלט כבד עוף",
+    "Muraturi": "חמוצים",
+    "Salata ”Suba”": "סלט 'שובה'",
+    "Pateul de pui": "פאטה עוף",
+    "Salata de sfecla": "סלט סלק",
+    "Salată cu rugula și somon": "סלט רוקט עם סלמון",
+    "Salata din varza cu mazare": "סלט כרוב עם אפונה",
+    "Salata verde cu pesmeti": "סלט ירוק עם קרוטונים",
+    "Salata cu ton": "סלט טונה",
+    "Salata Olivier": "סלט אוליבייה",
+    "Salata cu bacon": "סלט עם בייקון",
+    "Salata Sopskii": "סלט שופסקי",
+    "Salata de fasole rosie": "סלט שעועית אדומה",
+    "Icra de vinete": "קוויאר חצילים",
+    "Salata cu dovleac si spanac": "סלט דלעת ותרד",
+    "Sfeclă coaptă cu feta": "סלק צלוי עם פטה",
+    "Salata verde cu legume": "סלט ירוק עם ירקות",
+
+    "Tocanita de porc": "תבשיל חזיר",
+    "Pirjoale de pui": "קציצות עוף",
+    "Сoaste de pork cu varza": "צלעות חזיר עם כרוב",
+    "Batuta de pui": "חזה עוף",
+    "Pirjoale de vita": "קציצות בקר",
+    "Nuggets de pui": "נאגטס עוף",
+    "Chashushuli": "חשושולי (תבשיל גאורגי חריף)",
+    "Paste de somon": "פסטה עם סלמון",
+    "Pelimeni cu carne": "פלמני עם בשר",
+    "Carne din vită Stroganoff": "בקר סטרוגנוף",
+    "Chiftelute in sos": "קציצות ברוטב",
+    "Pui Teriyaki": "עוף טריאקי",
+    "Limba de vita": "לשון בקר",
+    "Ficatei de pui": "כבד עוף",
+
+    "Supa zilei": "מרק היום",
+    "Supă cremă de dovleac": "מרק קרם דלעת",
+    "Bors rosu": "בורשט אדום",
+    "Supă de linte": "מרק עדשים",
+    "Supă cu perișoare": "מרק כדורי בשר",
+    "Zeama": "מרק עוף"
   }
 }

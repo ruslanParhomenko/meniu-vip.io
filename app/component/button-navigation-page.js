@@ -17,6 +17,8 @@ export default function ButtonNavigationPage({ leftPage, rightPage }) {
         return "← prev";
       case `/${locale.locale}/cusine`:
         return "← home";
+      case `/${locale.locale}/daily-menu`:
+        return "← home";
       default:
         return null;
     }
