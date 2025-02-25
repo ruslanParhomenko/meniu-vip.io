@@ -80,7 +80,7 @@
     "Salata cu ficat de pui": "סלט כבד עוף",
     "Muraturi": "חמוצים",
     "Salata ”Suba”": "סלט 'שובה'",
-    "Pateul de pui": "פאטה עוף",
+    "Pate de pui": "פאטה עוף",
     "Salata de sfecla": "סלט סלק",
     "Salată cu rugula și somon": "סלט רוקט עם סלמון",
     "Salata din varza cu mazare": "סלט כרוב עם אפונה",
@@ -116,8 +116,10 @@
     "Supă de linte": "מרק עדשים",
     "Supă cu perișoare": "מרק כדורי בשר",
     "Zeama": "מרק עוף",
+    "Ciorba Soleanca": "מרק סוליאנקה",
 
     "Tiramisu": "Tiramisu",
-    "CheeseCake": "Cheesecake"
+    "CheeseCake": "Cheesecake",
+    "Tort Oreo": "עוגת אוראו"
   }
 }

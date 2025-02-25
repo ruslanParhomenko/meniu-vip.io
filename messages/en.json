@@ -81,7 +81,7 @@
     "Salata cu ficat de pui": "Chicken Liver Salad",
     "Muraturi": "Pickles",
     "Salata ”Suba”": "Shuba Salad",
-    "Pateul de pui": "Chicken Pâté",
+    "Pate de pui": "Chicken Pâté",
     "Salata de sfecla": "Beetroot Salad",
     "Salată cu rugula și somon": "Arugula and Salmon Salad",
     "Salata din varza cu mazare": "Cabbage Salad with Peas",
@@ -125,8 +125,10 @@
     "Supă de linte": "Lentil Soup",
     "Supă cu perișoare": "Meatball Soup",
     "Zeama": "Chicken soup",
+    "Ciorba Soleanca": "Soleanca Soup",
 
     "Tiramisu": "Tiramisu",
-    "CheeseCake": "Cheesecake"
+    "CheeseCake": "Cheesecake",
+    "Tort Oreo": "Oreo Cake"
   }
 }

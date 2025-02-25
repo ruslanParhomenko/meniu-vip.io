@@ -81,7 +81,7 @@
     "Salata cu ficat de pui": "Салат с куриной печенью",
     "Muraturi": "Соленья",
     "Salata ”Suba”": "Салат 'Шуба'",
-    "Pateul de pui": "Куриный паштет",
+    "Pate de pui": "Куриный паштет",
     "Salata de sfecla": "Свекольный салат",
     "Salată cu rugula și somon": "Салат с рукколой и лососем",
     "Salata din varza cu mazare": "Капустный салат с горошком",
@@ -125,8 +125,10 @@
     "Supă de linte": "Чечевичный суп",
     "Supă cu perișoare": "Суп с фрикадельками",
     "Zeama": "Зама",
+    "Ciorba Soleanca": "Солянка",
 
     "Tiramisu": "Tiramisu",
-    "CheeseCake": "Cheesecake"
+    "CheeseCake": "Cheesecake",
+    "Tort Oreo": "Пирожное Oreo"
   }
 }

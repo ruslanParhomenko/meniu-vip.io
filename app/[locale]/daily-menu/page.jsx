@@ -43,10 +43,10 @@ export default function DailyMenuPage() {
   return (
     <div
       {...handlers}
-      className="flex flex-col items-center justify-center w-full relative"
+      className="flex flex-col items-center justify-center w-full relative tracking-wide "
     >
       <ButtonNavigationPage leftPage="/" />
-      <h1 className="flex justify-center items-center font-bold text-[18px] py-5">
+      <h1 className="flex justify-center items-center font-bold text-[18px] py-5 ">
         <Image src="../dot.svg" width={16} height={16} priority alt="dot" />
         {t("Salds & Appetixers")}
         <Image src="../dot.svg" width={16} height={16} priority alt="dot" />

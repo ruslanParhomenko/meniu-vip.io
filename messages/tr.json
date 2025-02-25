@@ -80,7 +80,7 @@
     "Salata cu ficat de pui": "Tavuk Ciğeri Salatası",
     "Muraturi": "Turşular",
     "Salata ”Suba”": "Şuba Salatası",
-    "Pateul de pui": "Tavuk Patesi",
+    "Pate de pui": "Tavuk Patesi",
     "Salata de sfecla": "Pancar Salatası",
     "Salată cu rugula și somon": "Roka ve Somon Salatası",
     "Salata din varza cu mazare": "Lahana ve Bezelye Salatası",
@@ -124,8 +124,10 @@
     "Supă de linte": "Mercimek Çorbası",
     "Supă cu perișoare": "Köfteli Çorba",
     "Zeama": "Tavuk çorbası",
+    "Ciorba Soleanca": "Solyanka çorbası",
 
     "Tiramisu": "Tiramisu",
-    "CheeseCake": "Cheesecake"
+    "CheeseCake": "Cheesecake",
+    "Tort Oreo": "Oreo pastası"
   }
 }
