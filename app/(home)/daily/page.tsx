@@ -1,5 +1,7 @@
-export default function MenuDaily() {
-  return (
-    <div className="flex h-full justify-center items-center">MenuDaily</div>
-  );
+import { getMenuDailyData } from "@/features/daily/action";
+import MenuDailyPage from "@/features/daily/menu-daily-page";
+
+export default async function MenuDaily() {
+  const data = await getMenuDailyData();
+  return <MenuDailyPage data={data} />;
 }
