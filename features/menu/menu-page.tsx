@@ -42,7 +42,7 @@ export function Row({ item }: { item: MenuItem }) {
 
   return (
     <div className="grid grid-cols-[2fr_1fr_auto] items-baseline text-xs tracking-wider">
-      <span className="w-full px-3 text-[0.86rem] text-black">
+      <span className="w-full px-2 text-[0.92rem] text-black">
         {t(item.name)}
       </span>
 
@@ -51,7 +51,7 @@ export function Row({ item }: { item: MenuItem }) {
       </span>
 
       {item.price != null && (
-        <span className="w-8 shrink-0 text-left text-[0.86rem] font-semibold">
+        <span className="w-10 shrink-0 text-left text-[0.92rem] font-semibold px-2">
           {item.price}
         </span>
       )}
@@ -84,7 +84,7 @@ export function Section({
 
   return (
     <div>
-      <h3 className="my-3 text-center font-bold tracking-widest italic text-[1.2rem]">
+      <h3 className="my-3 text-center font-bold tracking-widest italic text-[1.5rem]">
         · {t(title)} ·
       </h3>
 
