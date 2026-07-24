@@ -5,6 +5,7 @@ import { Link, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { Dot } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function MenuCover() {
   const t = useTranslations("cover");
@@ -43,14 +44,25 @@ export default function MenuCover() {
             onClick={(e) => handleNavigation(e, link.href)}
             className="flex justify-center items-center gap-3 transition-transform active:scale-95"
           >
-            <Dot size={22} />
-            <p
-              className="text-[1.8rem] tracking-widest text-gray-600"
-              style={{ fontFamily: "var(--font-lobster)" }}
-            >
+            <Image
+              className=""
+              src="/menu-ornament.png"
+              alt="logo"
+              width={16}
+              height={16}
+              priority
+            />
+            <p className="text-[1.8rem] tracking-widest text-gray-600 font-extrabold">
               {link.label}
             </p>
-            <Dot size={22} />
+            <Image
+              className="rotate-180"
+              src="/menu-ornament.png"
+              alt="logo"
+              width={16}
+              height={16}
+              priority
+            />
           </Link>
         ))}
       </div>

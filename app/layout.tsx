@@ -12,12 +12,6 @@ const cormorant = Cormorant_Garamond({
   style: ["normal", "italic"],
   display: "swap",
 });
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-fraunces",
-});
 
 export const metadata = {
   title: "MENU-NOVA",
@@ -34,7 +28,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${cormorant.className} ${fraunces.variable} antialiased md:max-w-107.5 md:mx-auto`}
+        className={`${cormorant.className} antialiased md:max-w-107.5 md:mx-auto`}
       >
         <NextIntlClientProvider>
           <WrapperLayout>{children}</WrapperLayout>
