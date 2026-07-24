@@ -51,6 +51,8 @@
 }
 
 :root {
+  --font-lobster: "Lobster", cursive;
+
   --bl: #1da1f2;
   --rd: #72092a;
   --gr: #6b7280;
@@ -154,4 +156,13 @@
 
 body {
   background: var(--background);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -9,6 +9,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {},
+      fontFamily: {
+        lobster: ["var(--font-lobster)"],
+      },
     },
   },
   plugins: [],

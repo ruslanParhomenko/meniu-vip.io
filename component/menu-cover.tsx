@@ -44,7 +44,10 @@ export default function MenuCover() {
             className="flex justify-center items-center gap-3 transition-transform active:scale-95"
           >
             <Dot size={22} />
-            <p className="text-[1.8rem] tracking-widest font-bold text-gray-500">
+            <p
+              className="text-[1.8rem] tracking-widest text-gray-600"
+              style={{ fontFamily: "var(--font-lobster)" }}
+            >
               {link.label}
             </p>
             <Dot size={22} />

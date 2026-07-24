@@ -1,4 +1,4 @@
-import { Cormorant_Garamond } from "next/font/google";
+import { Cormorant_Garamond, Fraunces } from "next/font/google";
 
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
@@ -11,6 +11,12 @@ const cormorant = Cormorant_Garamond({
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
+});
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-fraunces",
 });
 
 export const metadata = {
@@ -28,7 +34,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${cormorant.className} antialiased md:max-w-107.5 md:mx-auto`}
+        className={`${cormorant.className} ${fraunces.variable} antialiased md:max-w-107.5 md:mx-auto`}
       >
         <NextIntlClientProvider>
           <WrapperLayout>{children}</WrapperLayout>

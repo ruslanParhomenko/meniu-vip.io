@@ -14,30 +14,15 @@ export default function MenuPage({
   data: MenuDataType | null;
   patch: string;
 }) {
-  const router = useRouter();
   const filterArray = PAGE[patch as keyof typeof PAGE];
 
-  const [isPending, startTransition] = useTransition();
-
-  const handleSwipe = () => {
-    startTransition(() => {
-      router.push("/");
-    });
-  };
-
-  const handlers = useSwipeable({
-    onSwipedLeft: handleSwipe,
-    onSwipedRight: handleSwipe,
-    preventScrollOnSwipe: false,
-    trackMouse: true,
-  });
+  const [isPending] = useTransition();
 
   if (!data || !filterArray?.length) return null;
 
   return (
     <ViewTransition>
       <div
-        {...handlers}
         className={`w-full h-full min-h-screen transition-opacity duration-300 ${
           isPending ? "opacity-50 pointer-events-none" : "opacity-100"
         }`}
