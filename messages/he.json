@@ -156,6 +156,11 @@
 
     "nuts": "אגוזים",
     "pistachios": "פיסטוקים",
-    "ciocolata_bucuria": "שוקולד \"Bucuria\""
+    "ciocolata_bucuria": "שוקולד \"Bucuria\"",
+
+    "garnituri": "תוספות",
+    "felul principal": "מנה עיקרית",
+    "salate si gustari": "סלטים ומנות ראשונות",
+    "felul intii": "מנה ראשונה"
   }
 }

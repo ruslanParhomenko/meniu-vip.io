@@ -156,6 +156,11 @@
 
     "nuts": "Орехи",
     "pistachios": "Фисташки",
-    "ciocolata_bucuria": "Шоколад «Bucuria»"
+    "ciocolata_bucuria": "Шоколад «Bucuria»",
+
+    "garnituri": "Гарниры",
+    "felul principal": "Основное блюдо",
+    "salate si gustari": "Салаты и закуски",
+    "felul intii": "Первое блюдо"
   }
 }

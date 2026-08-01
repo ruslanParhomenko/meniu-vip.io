@@ -8,6 +8,9 @@ const actionTag = MENU_DAILY_ACTION_TAG;
 export type MenuItem = {
   ro: string;
   en: string;
+  ru: string;
+  tr: string;
+  he: string;
 };
 
 export type MenuDailyDataForm = {

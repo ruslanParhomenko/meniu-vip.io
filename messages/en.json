@@ -156,6 +156,11 @@
 
     "nuts": "Nuts",
     "pistachios": "Pistachios",
-    "ciocolata_bucuria": "\"Bucuria\" Chocolate"
+    "ciocolata_bucuria": "\"Bucuria\" Chocolate",
+
+    "garnituri": "Garnishes",
+    "felul principal": "Main course",
+    "salate si gustari": "Salads & Sweets",
+    "felul intii": "First course"
   }
 }
